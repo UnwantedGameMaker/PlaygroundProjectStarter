@@ -9,8 +9,7 @@ public class ConditionCollision : ConditionBase
 	// This function will be called when something touches the trigger collider
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.collider.CompareTag(filterTag)
-			|| !filterByTag)
+		if (collision.gameObject.tag == "Bullet")
 		{
 			ExecuteAllActions(collision.gameObject);
 		}
